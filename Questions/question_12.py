@@ -1,10 +1,6 @@
-for i in range(1,6):
+n = int(input("enter the number: "))
 
-    for j in range (5-i):
-        print(" ", end="")
-
-    for k in range (i * 2 -1):
-        print("*", end="")
-
+for i in range(1,n):
+    print(" " * (n - i),end="")
+    print("*" * (i),end="")
     print()
-
