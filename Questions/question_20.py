@@ -6,3 +6,4 @@ def sum(a):
     
 a = sum(10)
 print(a)
+
