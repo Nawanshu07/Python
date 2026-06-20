@@ -12,4 +12,4 @@ while(1):
     elif(num > n):
         print("Think a greater number!!")
     else:
-        print("Think a smaller number!!")
+        print("Think a smaller number!!");
