@@ -13,3 +13,7 @@ while(1):
         print("Think a greater number!!")
     else:
         print("Think a smaller number!!");
+
+
+
+        
