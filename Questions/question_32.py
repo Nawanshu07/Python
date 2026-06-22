@@ -14,6 +14,3 @@ while(1):
     else:
         print("Think a smaller number!!");
 
-
-
-        
