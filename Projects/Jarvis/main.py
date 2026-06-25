@@ -1,7 +1,8 @@
 import speech_recognition as sr
 import pyttsx3
 import webbrowser
-
+import musicLibrary
+import requests
 
 
 def speak(text):
@@ -9,13 +10,21 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-def process_command(command):
+def process_command(command:str):
     if "open google" in command.lower():
         webbrowser.open("https://google.com")
+
     elif "open insta" in command.lower():
         webbrowser.open("https://instagram.com")
+
     elif "open youtube" in command.lower():
         webbrowser.open("https://youtube.com")
+        
+    elif command.lower().startswith("play"):
+        song = command.strip().lower().split(" ")[1]
+        link = musicLibrary.music[song]
+        webbrowser.open(link)
+
 if __name__ == "__main__":
     speak("Initializing Jarvis...")
 
@@ -26,18 +35,15 @@ if __name__ == "__main__":
             with sr.Microphone() as source:
                 print("Listening...")
                 audio = r.listen(source , timeout=5 , phrase_time_limit=5)
-            print("Recognising......")
             command = r.recognize_google(audio).lower().strip()
             print(command)
             
             if "jarvis" in command.lower():
-                print("JARVIS DETECTED!")
                 speak("yeah")
                 
                 with sr.Microphone() as source:
                     print("Jarvis is activated!")
                     audio = r.listen(source)
-                print("Recognising......")
                 command = r.recognize_google(audio)
                 process_command(command)
 
