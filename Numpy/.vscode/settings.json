@@ -1,0 +1,12 @@
+{
+  "python.defaultInterpreterPath": "C:\\Users\\Nawanshu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "python.analysis.extraPaths": [
+    "C:\\Users\\Nawanshu\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages"
+  ],
+  "code-runner.executorMap": {
+    "python": "py -u"
+  },
+  "terminal.integrated.env.windows": {
+    "PATH": "C:\\Users\\Nawanshu\\AppData\\Local\\Programs\\Python\\Python312;C:\\Users\\Nawanshu\\AppData\\Local\\Programs\\Python\\Python312\\Scripts;${env:PATH}"
+  }
+}
