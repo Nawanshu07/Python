@@ -1,9 +1,9 @@
 import numpy as np
 
-print("0D array: ")
+print("0D array: ")#also known as scaler array
 array = np.array("A")
 print(array.ndim)
-print(array.shape)
+print(array.shape)#tells the size of the array along each dimension.
 
 print()
 print("1D array: ")
