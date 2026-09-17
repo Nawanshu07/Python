@@ -18,3 +18,5 @@ print()
 print(seniors)
 print()
 
+adults = np.where(ages <= 18 , ages , 0)#keeps the orignal shape of the array but lot slower than boolean idnesxing
+print(adults)
